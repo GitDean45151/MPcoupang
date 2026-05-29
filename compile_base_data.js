@@ -66,6 +66,30 @@ function compile() {
     console.log(`Parsed ${sellerCount} seller mappings.`);
   }
 
+  // 1.5 Parse 2Q sheet to update team and marketer mappings for Q2 vendors
+  const q2Sheet = workbook.Sheets['2Q'];
+  if (q2Sheet) {
+    const q2Rows = XLSX.utils.sheet_to_json(q2Sheet, { defval: null });
+    let q2Updated = 0;
+    q2Rows.forEach(row => {
+      const vendorid = String(row['vendorid'] || row['vendor id'] || '').trim();
+      if (/^A\d+$/.test(vendorid)) {
+        const team = String(row['팀'] || '').trim();
+        const marketer = String(row['마케터'] || '').trim();
+        if (q1Vendors[vendorid]) {
+          if (team && team !== '미배정' && team !== 'null') {
+            q1Vendors[vendorid].team = team;
+          }
+          if (marketer && marketer !== '미배정' && marketer !== 'null') {
+            q1Vendors[vendorid].marketer = marketer;
+          }
+          q2Updated++;
+        }
+      }
+    });
+    console.log(`Updated team/marketer for ${q2Updated} vendors from 2Q sheet.`);
+  }
+
   // 2. Parse 2026Q1 Agency commission-MP(PA).xlsx
   let q1QoqTotalFromFile = 503708883;
   let q1GroupBases = {

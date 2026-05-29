@@ -447,7 +447,7 @@
     "A01446277": {
       "q1Revenue": 0,
       "team": "마케팅1팀",
-      "marketer": "김규일",
+      "marketer": "마케팅1팀",
       "vendorName": "자하람"
     },
     "A00392036": {
@@ -1101,7 +1101,7 @@
     "A01369114": {
       "q1Revenue": 0,
       "team": "마케팅2팀",
-      "marketer": "장현민",
+      "marketer": "마케팅2팀",
       "vendorName": "벨라커머셜"
     },
     "A00713899": {
@@ -2301,7 +2301,7 @@
     "A00416225": {
       "q1Revenue": 0,
       "team": "마케팅2팀",
-      "marketer": "장현민",
+      "marketer": "마케팅2팀",
       "vendorName": "가구고래"
     },
     "A00423453": {
@@ -2313,7 +2313,7 @@
     "A01282453": {
       "q1Revenue": 0,
       "team": "마케팅2팀",
-      "marketer": "장현민",
+      "marketer": "마케팅2팀",
       "vendorName": "포토보이"
     },
     "A00224635": {
@@ -2769,7 +2769,7 @@
     "A01257458": {
       "q1Revenue": 2093784,
       "team": "마케팅3팀",
-      "marketer": "박송희",
+      "marketer": "마케팅3팀",
       "vendorName": "랑주317"
     },
     "A00190692": {
@@ -5012,14 +5012,14 @@
     },
     "A00772051": {
       "q1Revenue": 0,
-      "team": "미배정",
-      "marketer": "미배정",
+      "team": "마케팅1팀",
+      "marketer": "마케팅1팀",
       "vendorName": "주식회사 봄봄북스"
     },
     "A00239521": {
       "q1Revenue": 0,
-      "team": "미배정",
-      "marketer": "미배정",
+      "team": "담당자찾기",
+      "marketer": "담당자찾기",
       "vendorName": "주식회사 삼원유통"
     },
     "A00324121": {
@@ -5030,8 +5030,8 @@
     },
     "A00857180": {
       "q1Revenue": 0,
-      "team": "미배정",
-      "marketer": "미배정",
+      "team": "마케팅3팀",
+      "marketer": "마케팅3팀",
       "vendorName": "주식회사 제이코프(JAYCORP.)"
     },
     "A00243154": {
@@ -5318,8 +5318,8 @@
     },
     "A00006992": {
       "q1Revenue": 0,
-      "team": "미배정",
-      "marketer": "미배정",
+      "team": "4팀",
+      "marketer": "강은정",
       "vendorName": "(주)보노테크"
     },
     "A00023709": {
@@ -7784,8 +7784,8 @@
     },
     "A01596934": {
       "q1Revenue": 0,
-      "team": "미배정",
-      "marketer": "미배정",
+      "team": "7팀",
+      "marketer": "염종훈",
       "vendorName": "주식회사통"
     },
     "A00386347": {
@@ -13940,8 +13940,8 @@
     },
     "A00633014": {
       "q1Revenue": 0,
-      "team": "미배정",
-      "marketer": "미배정",
+      "team": "2팀",
+      "marketer": "박승훈",
       "vendorName": "파인어스"
     },
     "A00455383": {
@@ -19766,8 +19766,8 @@
     },
     "A01407715": {
       "q1Revenue": 0,
-      "team": "미배정",
-      "marketer": "미배정",
+      "team": "2팀",
+      "marketer": "박승훈",
       "vendorName": "에이치엘비(주)헬스케어 세종영업소"
     },
     "A00121155": {
