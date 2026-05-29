@@ -19,8 +19,9 @@ let q1ChartValues = {
   'group 3': 490090134,
   'group 4': 21605441
 };
-let q2ReferenceDate = '260513';
+let q2ReferenceDate = '260515';
 let q2ElapsedDays = 0;
+let q2TotalDays = 91;
 
 // Pivot table sorting state
 let pivotSortColumn = 'incentive';
@@ -71,6 +72,7 @@ async function fetchBaseData() {
       q2ReferenceDate = data.q2ReferenceDate;
     }
     q2ElapsedDays = data.q2ElapsedDays !== undefined ? data.q2ElapsedDays : 0;
+    q2TotalDays = data.q2TotalDays !== undefined ? data.q2TotalDays : 91;
     updatePaceUI();
     
     updateDbStatusUI(data.totalUpdatesCount, data.lastUpdated);
@@ -266,6 +268,7 @@ async function handleSalesUpdateUpload(file) {
     expectedQ1QoqTotal = data.expectedQ1QoqTotal !== undefined ? data.expectedQ1QoqTotal : 0;
     expectedQ2QoqTotal = data.expectedQ2QoqTotal !== undefined ? data.expectedQ2QoqTotal : 0;
     q2ElapsedDays = data.q2ElapsedDays !== undefined ? data.q2ElapsedDays : 0;
+    q2TotalDays = data.q2TotalDays !== undefined ? data.q2TotalDays : 91;
     if (data.q1ChartValues) {
       q1ChartValues = data.q1ChartValues;
     }
@@ -314,6 +317,7 @@ async function handleResetUpdates() {
     expectedQ1QoqTotal = data.expectedQ1QoqTotal !== undefined ? data.expectedQ1QoqTotal : 0;
     expectedQ2QoqTotal = data.expectedQ2QoqTotal !== undefined ? data.expectedQ2QoqTotal : 0;
     q2ElapsedDays = data.q2ElapsedDays !== undefined ? data.q2ElapsedDays : 0;
+    q2TotalDays = data.q2TotalDays !== undefined ? data.q2TotalDays : 91;
     if (data.q1ChartValues) {
       q1ChartValues = data.q1ChartValues;
     }
@@ -885,7 +889,7 @@ function exportToExcel() {
 function updatePaceUI() {
   const paceValEl = document.getElementById('pace-value');
   if (paceValEl) {
-    const pacePercent = (q2ElapsedDays / 90) * 100;
+    const pacePercent = (q2ElapsedDays / q2TotalDays) * 100;
     paceValEl.textContent = pacePercent.toFixed(2) + '%';
   }
 }

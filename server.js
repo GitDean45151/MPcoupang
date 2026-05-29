@@ -64,9 +64,9 @@ let q1Group3AdSpend = 490090134;
 let q1Group4AdSpend = 21605441;
 
 // Q2 Days and reference date tracking based on filename
-let q2ElapsedDays = 43;
+let q2ElapsedDays = 45;
 let q2TotalDays = 91;
-let q2ReferenceDate = '260513';
+let q2ReferenceDate = '260515';
 
 // Baseline tracking variables
 let currentQ1QoqTotal = 242727142; // default fallback
@@ -434,12 +434,12 @@ function extractCurrentQ1QoqTotal(filePath) {
 }
 
 /**
- * Parses elapsed/total Q2 days and reference date from filename (delaying by 2 days)
+ * Parses elapsed/total Q2 days and reference date from filename
  */
 function getQ2DaysFromFilename(filename) {
-  let elapsedDays = 43; 
+  let elapsedDays = 45; 
   const totalDays = 91; 
-  let referenceDate = '260513'; // default fallback
+  let referenceDate = '260515'; // default fallback for 260515_MP
 
   const match = filename.match(/(?:20)?(\d{2})[-_.]?(\d{2})[-_.]?(\d{2})/);
   if (match) {
@@ -450,7 +450,7 @@ function getQ2DaysFromFilename(filename) {
 
       const filenameDate = new Date(year, month, day);
       if (!isNaN(filenameDate.getTime())) {
-        const refDate = new Date(filenameDate.getTime() - 2 * 24 * 60 * 60 * 1000);
+        const refDate = filenameDate; 
         const q2Start = new Date(year, 3, 1); 
         
         const diffTime = refDate.getTime() - q2Start.getTime();
